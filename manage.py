@@ -1,7 +1,7 @@
 import os
 from flask_script import Manager
 
-from app import app, db
+import app
 
 app.config.from_object(os.environ['APP_SETTINGS'])
 
