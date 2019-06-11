@@ -10,6 +10,14 @@ URL:https://indianbanksserver.herokuapp.com/v1/banks/all_branches
 
 Query params: bank_name, city
 
+Note: Only first 9000 rows from the branches table have been copied over to the heroku postgres instance.
+
+Sample input for API 2:
+
+`bank_name = ABHYUDAYA COOPERATIVE BANK LIMITED`
+
+`city = MUMBAI`
+
 ## Setting up app on local
 
 `python 3.x`
