@@ -7,6 +7,7 @@ import helpers
 #app.config.from_object(os.environ['APP_SETTINGS'])
 #app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
+app = Flask(__name__)
 db = SQLAlchemy(app)
 
 import models
