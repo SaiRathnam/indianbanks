@@ -19,12 +19,15 @@ Query params: bank_name, city
 `$ virtualenv venv`
 
 2. Pip install all the requirements
+
 `$ pip install -r requirements.txt`
 
 3. Setup the local database
 
 4. Copy over contents from `envs_template.sh` into `envs.sh` and export all necessary environment variable values
+
 `$ source envs.sh`
 
 5. Start the app (in development mode)
+
 `$ python3 app.py`
