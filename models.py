@@ -1,10 +1,12 @@
-import app
+from flask_sqlalchemy import SQLAlchemy
 
-class Bank(app.db.Model):
+db = SQLAlchemy()
+
+class Bank(db.Model):
     __tablename__ = 'banks'
 
-    name = app.db.Column(app.db.String(49))
-    id = app.db.Column(app.db.Integer, primary_key = True, nullable = False)
+    name = db.Column(db.String(49))
+    id = db.Column(db.Integer, primary_key = True, nullable = False)
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -13,16 +15,16 @@ class Bank(app.db.Model):
         return self.id
 
 
-class Branch(app.db.Model):
+class Branch(db.Model):
     __tablename__ = 'branches'
 
-    ifsc = app.db.Column(app.db.String(11), primary_key = True, nullable = False)
-    bank_id = app.db.Column(app.db.Integer)
-    branch = app.db.Column(app.db.String(74))
-    address = app.db.Column(app.db.String(195))
-    city = app.db.Column(app.db.String(50))
-    district = app.db.Column(app.db.String(50))
-    state = app.db.Column(app.db.String(26))
+    ifsc = db.Column(db.String(11), primary_key = True, nullable = False)
+    bank_id = db.Column(db.Integer)
+    branch = db.Column(db.String(74))
+    address = db.Column(db.String(195))
+    city = db.Column(db.String(50))
+    district = db.Column(db.String(50))
+    state = db.Column(db.String(26))
 
     def __repr__(self):
         return '<IFSC {}>'.format(self.ifsc)
